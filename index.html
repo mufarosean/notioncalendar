@@ -1,34 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>March Calendar</title>
 	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
+		body {
+			background-color: black;
 			font-family: Arial, sans-serif;
+			color: white;
+			text-align: center;
+			margin: 0;
+			padding: 0;
 		}
+		
+		table {
+			margin: auto;
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		
 		td {
-			border: 1px solid #ddd;
-			padding: 8px;
+			padding: 10px;
+			width: 50px;
+			height: 50px;
 			text-align: center;
 			vertical-align: middle;
+			border: none;
 		}
+		
 		th {
-			padding: 8px;
-			text-align: center;
-			background-color: #ddd;
-			border: 1px solid #ddd;
-			vertical-align: middle;
+			padding: 10px;
+			border: none;
 		}
-		.current-day {
-			background-color: #ddd;
+		
+		tr:nth-child(odd) td:nth-child(even),
+		tr:nth-child(even) td:nth-child(odd) {
+			background-color: #222;
+		}
+		
+		td.highlight {
+			background-color: #444;
+		}
+		
+		.today {
+			background-color: #555;
+			font-weight: bold;
+		}
+		
+		caption {
+			padding: 10px;
+			font-size: 24px;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			border: none;
+			background-color: #222;
 		}
 	</style>
 </head>
 <body>
-	<h1>March 2023</h1>
 	<table>
+		<caption>March 2023</caption>
 		<thead>
 			<tr>
 				<th>Sun</th>
